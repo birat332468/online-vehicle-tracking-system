@@ -1,0 +1,50 @@
+#fuel_page, #service_page, #maintanence_page{
+  display:none;
+  position: absolute;
+  top: 130px;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  z-index: 10;
+  background-color:white;
+}
+.popup{
+  margin: 35% 25% 25% 25%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-row-gap: 50px;
+}
+#fuel_log, #newfuelentry, #service_log, #newserviceentry, #maintanence_log, #newmaintanenceentry{
+  padding:10px;
+  height: 40px;
+  width:200px;
+}
+#fuel_button, #service_button{
+  width:120px;
+  height:90px;
+}
+.maintanencebutton, .livetrackingbutton{
+  grid-column: 1/span 2;
+}
+#maintanence_button{
+  width:210px;
+  height:60px;
+}
+#livetracking_button{
+  width:325px;
+  height:40px;
+}
+h1{
+  margin-top: 15%;
+  text-align: center;
+}
+
+#buttons{
+  margin-top: 20%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 1px;
+  grid-row-gap: 30px;
+}

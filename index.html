@@ -1,0 +1,68 @@
+<html>
+<head>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABunubjYhh4pFYNK-Y98Y5gCSAwNbkcWg"
+  type="text/javascript"></script>
+  <style type="text/css">
+
+  	#map {
+  			width: 90%;
+  			height: 30%;
+        margin-top: 250px;
+        margin-left: auto;
+        margin-right: auto;
+  	 }
+  </style>
+
+  <script type="text/javascript">
+
+  		x = navigator.geolocation;
+
+
+  		x.getCurrentPosition(success, failure);
+
+      var id, option;
+  		function success(position){
+  			var myLat = position.coords.latitude;
+  			var myLong = position.coords.longitude;
+        var coordinatesObject = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        }
+        localStorage.setItem('coordinates', JSON.stringify(coordinatesObject));
+
+        console.log(localStorage)
+
+  			var coords = new google.maps.LatLng(myLat,myLong);
+
+  		option = {
+          gestureHandling: 'none',
+  				zoom:19.5,
+  				center: coords,
+  				mapTypeId: google.maps.MapTypeId.ROADMAP,
+          enableHighAccuracy: true,
+          timeout: 5000,
+          maximumAge: 0
+  			}
+
+  			var map = new google.maps.Map(document.getElementById("map"), option);
+  			var marker = new google.maps.Marker({map:map, position:coords,
+          icon:{
+            path:google.maps.SymbolPath.CIRCLE,
+            scale:15,
+            fillColor:"#F00",
+            fillOpacity:0.8,
+            strokeWeight:1}});
+      }
+
+  		function failure(){ }
+      id = navigator.geolocation.watchPosition(success, failure, option);
+  </script>
+
+</head>
+
+<body>
+		<div id="map"></div>
+
+
+</body>
+</html>

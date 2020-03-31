@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="template.css"  rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    Online Vehicle Tracking system
+  </title>
+</head>
+
+<body>
+  <h1>ONLINE VEHICLE TRACKING</h1>
+
+  <div id="buttons">
+    <div class="fuel button"><label for="fuel_button"></label><input type="button" id="fuel_button" value="FUEL"></div>
+    <div class="service button"><label for="service_button"></label><input type="button" id="service_button" value="SERVICE"></div>
+
+    <div class="maintanencebutton"><label for="maintanence_button"></label><input type="button" id="maintanence_button" value="MAINTANENCE"></div>
+    <div class="livetrackingbutton"><label for="livetracking_button"></label><input type="button" onclick= "window.location.href = 'index.html';" id="livetracking_button" value="LIVE TRACKING"></div>
+  </div>
+
+  <div id = "fuel_page">
+    <div class="popup">
+    <div class="fuellog"><label for="fuel_log"></label><input type="button" id="fuel_log" value="FUEL ENTRY LOG"></div>
+    <div class="newfuelentry"><label for="newfuelentry"></label><input type="button" id="newfuelentry" value="NEW FUEL ENTRY">
+    </div>
+  </div>
+</div>
+
+<div id = "service_page">
+  <div class="popup">
+  <div class="servicelog"><label for="service_log"></label><input type="button" id="service_log" value="SERVICE ENTRY LOG"></div>
+  <div class="newserviceentry"><label for="newserviceentry"></label><input type="button" id="newserviceentry" value="NEW SERVICE ENTRY">
+  </div>
+</div>
+</div>
+
+<div id = "maintanence_page">
+  <div class="popup">
+  <div class="maintanencelog"><label for="maintanence_log"></label><input type="button" id="maintanence_log" value="MAINTANENCE ENTRY LOG"></div>
+  <div class="newmaintanenceentry"><label for="newmaintanenceentry"></label><input type="button" id="newmaintanenceentry" value="NEW MAINTANENCE ENTRY">
+  </div>
+</div>
+</div>
+
+<script src="template.js"></script>
