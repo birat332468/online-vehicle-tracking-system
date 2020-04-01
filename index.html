@@ -13,14 +13,24 @@
   <h1>ONLINE VEHICLE TRACKING</h1>
 
   <div id="buttons">
-    <div class="fuel button"><label for="fuel_button"></label><input type="button" id="fuel_button" value="FUEL"></div>
-    <div class="service button"><label for="service_button"></label><input type="button" id="service_button" value="SERVICE"></div>
+      <div class="fuel button"><label for="fuel_button"></label><input type="button" id="fuel_button" value="FUEL" onclick ="fuel_page()"></div>
+      <div class="service button"><label for="service_button"></label><input type="button" id="service_button" value="SERVICE" onclick="service_page()"></div>
 
-    <div class="maintanencebutton"><label for="maintanence_button"></label><input type="button" id="maintanence_button" value="MAINTANENCE"></div>
-    <div class="livetrackingbutton"><label for="livetracking_button"></label><input type="button" onclick= "window.location.href = 'livetracking.html';" id="livetracking_button" value="LIVE TRACKING"></div>
-  </div>
+      <div class="maintanencebutton"><label for="maintanence_button"></label><input type="button" id="maintanence_button" value="MAINTANENCE" onclick="maintanence_page()"></div>
+      <div class="livetrackingbutton"><label for="livetracking_button"></label><input type="button" onclick= "window.location.href = 'livetracking.html';" id="livetracking_button" value="LIVE TRACKING"></div>
+    </div>
 
-  <div id = "fuel_page">
+    <div id = "fuel_page">
+      <div id="mySidenav1" class="sidenav1">
+      <input type="button" value="x" href="javascript:void(0)" class="closebtn" onclick="closeNav1()">
+      <input type="button" onclick="close_fuel_page(); close_service_page(); close_maintanence_page();" value="Home">
+      <input type="button" onclick="fuel_page(); close_service_page(); close_maintanence_page();closeNav1();" value="Fuel">
+      <input type="button" onclick="close_fuel_page(); service_page(); close_maintanence_page();closeNav1();" value="Service">
+      <input type="button" onclick="close_fuel_page(); close_service_page(); maintanence_page();closeNav1();" value="Maintanence">
+      <input type="button" onclick="window.location.href = 'livetracking.html';" value="Livetracking">
+      </div>
+      <span class="pointer1" style="font-size:35px;cursor:pointer" onclick="openNav1()">  &#9776;</span>
+
     <div class="popup">
     <div class="fuellog"><label for="fuel_log"></label><input type="button" id="fuel_log" value="FUEL ENTRY LOG"></div>
     <div class="newfuelentry"><label for="newfuelentry"></label><input type="button" id="newfuelentry" value="NEW FUEL ENTRY">
@@ -29,6 +39,15 @@
 </div>
 
 <div id = "service_page">
+  <div id="mySidenav2" class="sidenav2">
+  <input type="button" value="x" href="javascript:void(0)" class="closebtn" onclick="closeNav2()">
+  <input type="button" onclick="close_fuel_page(); close_service_page(); close_maintanence_page();" value="Home">
+  <input type="button" onclick="fuel_page(); close_service_page(); close_maintanence_page();closeNav2();" value="Fuel">
+  <input type="button" onclick="close_fuel_page(); service_page(); close_maintanence_page();closeNav2();" value="Service">
+  <input type="button" onclick="close_fuel_page(); close_service_page(); maintanence_page();closeNav2();" value="Maintanence">
+  <input type="button" onclick="window.location.href = 'livetracking.html';" value="Livetracking">
+  </div>
+  <span class="pointer2" style="font-size:35px;cursor:pointer" onclick="openNav2()">  &#9776;</span>
   <div class="popup">
   <div class="servicelog"><label for="service_log"></label><input type="button" id="service_log" value="SERVICE ENTRY LOG"></div>
   <div class="newserviceentry"><label for="newserviceentry"></label><input type="button" id="newserviceentry" value="NEW SERVICE ENTRY">
@@ -37,6 +56,15 @@
 </div>
 
 <div id = "maintanence_page">
+  <div id="mySidenav3" class="sidenav3">
+  <input type="button" value="x" href="javascript:void(0)" class="closebtn" onclick="closeNav3()">
+  <input type="button" onclick="close_fuel_page(); close_service_page(); close_maintanence_page();" value="Home">
+  <input type="button" onclick="fuel_page(); close_service_page(); close_maintanence_page();closeNav3();" value="Fuel">
+  <input type="button" onclick="close_fuel_page(); service_page(); close_maintanence_page();closeNav3();" value="Service">
+  <input type="button" onclick="close_fuel_page(); close_service_page(); maintanence_page();closeNav3();" value="Maintanence">
+  <input type="button" onclick="window.location.href = 'livetracking.html';" value="Livetracking">
+  </div>
+  <span class="pointer3" style="font-size:35px;cursor:pointer" onclick="openNav3()">  &#9776;</span>
   <div class="popup">
   <div class="maintanencelog"><label for="maintanence_log"></label><input type="button" id="maintanence_log" value="MAINTANENCE ENTRY LOG"></div>
   <div class="newmaintanenceentry"><label for="newmaintanenceentry"></label><input type="button" id="newmaintanenceentry" value="NEW MAINTANENCE ENTRY">

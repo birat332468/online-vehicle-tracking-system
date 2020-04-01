@@ -1,18 +1,10 @@
 <html>
 <head>
+  <link href="template.css"  rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABunubjYhh4pFYNK-Y98Y5gCSAwNbkcWg"
   type="text/javascript"></script>
-  <style type="text/css">
-
-  	#map {
-  			width: 90%;
-  			height: 30%;
-        margin-top: 250px;
-        margin-left: auto;
-        margin-right: auto;
-  	 }
-  </style>
-
   <script type="text/javascript">
 
   		x = navigator.geolocation;
@@ -36,7 +28,7 @@
 
   		option = {
           gestureHandling: 'none',
-  				zoom:19.5,
+  				zoom:18,
   				center: coords,
   				mapTypeId: google.maps.MapTypeId.ROADMAP,
           enableHighAccuracy: true,
@@ -48,7 +40,7 @@
   			var marker = new google.maps.Marker({map:map, position:coords,
           icon:{
             path:google.maps.SymbolPath.CIRCLE,
-            scale:15,
+            scale:10,
             fillColor:"#F00",
             fillOpacity:0.8,
             strokeWeight:1}});
@@ -57,11 +49,15 @@
   		function failure(){ }
       id = navigator.geolocation.watchPosition(success, failure, option);
   </script>
-
+  <title>
+    Online Vehicle Tracking system
+  </title>
 </head>
 
 <body>
+  <h1>ONLINE VEHICLE TRACKING</h1>
 		<div id="map"></div>
+    <div id="back"><input type="button"  value="Back" onclick="window.location.href = 'index.html'"></div>
 
 
 </body>
